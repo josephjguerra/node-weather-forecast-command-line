@@ -15,6 +15,9 @@ function printWeather(zip, forecast) {
 // function to print out errors
 function printError(error) {
   console.error(error.message);
+  if (error.message === "Cannot read property 'txt_forecast' of undefined") {
+    console.log('Try entering a real 5-digit zip!');
+  };
 };
 
 // Connect to wunderground API
